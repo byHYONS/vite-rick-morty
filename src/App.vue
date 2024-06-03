@@ -3,6 +3,9 @@
 // import store:
 import { store } from './store';
 
+// import axios:
+import axios from 'axios';
+
 // import component:
 import listComponent from './components/ListComponent.vue';
 
@@ -11,7 +14,8 @@ export default {
    nome: 'App',
    data (){
       return {
-         title: 'Rick and Morty App'
+         title: 'Rick and Morty App',
+         store,
       }
    },
    props: {
@@ -19,6 +23,12 @@ export default {
    },
    components: {
       listComponent,
+   },
+   created(){
+      axios.get(this.store.apiURL).then(response => {
+         this.store.cards = response.data.results;
+         console.log(response.data.results);
+      });
    }
 }
 
@@ -29,7 +39,7 @@ export default {
 <template>
 
    <div class="container-full bg-squares">
-      <section class="">
+      <section class="content">
 
          <h1> {{ title }} </h1>
 
@@ -52,10 +62,9 @@ export default {
 
 .bg-squares {
    @include checkerboard(70px, $white, $gray1, $gray2);
-      height: 100vh;
       text-align: center;
       h1 {
-         margin: 30px 0 50px;
+         padding: 30px 0 50px;
          font-size: 40px;
          font-weight: 900;
          

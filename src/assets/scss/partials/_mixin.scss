@@ -7,3 +7,7 @@
     background-size: #{$size} #{$size};
     background-blend-mode: multiply;
 }
+
+@mixin col-x($gap, $item, $space) {
+    width: calc(100% / $item - ($gap * $space / $item));
+}

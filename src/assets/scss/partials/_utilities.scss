@@ -34,6 +34,7 @@
 .row-no-wrap {display: flex;}
 
         /* COLONNE */
+
 .col-10 {width: 10%;}
 .col-11 {width: calc(100% / 9);}
 .col-14 {width: calc(100% / 7);}
@@ -56,6 +57,8 @@
 .col-90 {width: 90%;}        
 .col-95 {width: 95%;}        
 .col-100 {width: 100%;}  
+
+.content { padding: 0 70px;}
 
 /* -------------------------
           MODIFIER 
