@@ -19,3 +19,15 @@ Approfittatene per esplorare la documentazione di un'api:
 
 #### Bonus:
 Creare un componente loader da visualizzare fintantoché i risultati non sono pronti.
+
+### Continuazione dell'esercizio:
+
+- L'applicativo dovrà cercare i risultati per nome e per stato `alive, dead, unknown` al click sul bottone search.
+
+- Il tasto reset invece riporterà i campi alla loro situazione iniziale.
+
+**INFO:** Trovate nella documentazione a questo indirizzo tutte le informazioni necessarie:
+`https://rickandmortyapi.com/documentation/#filter-characters`
+
+#### BONUS:
+creare un componente utile per la paginazione dei risultati.

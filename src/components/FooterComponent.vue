@@ -5,14 +5,6 @@ import foundComponent from './FoundComponent.vue';
 
 export default {
    nome: 'footerComponent',
-   props: {
-
-   },
-   data(){
-      return{
-
-      }
-   },
    components: {
     foundComponent,
 
@@ -25,7 +17,8 @@ export default {
 <!-- HTML -->
 <template>
 
-    <foundComponent />
+    <!-- found charecter component -->
+    <foundComponent /> 
 
 </template>
 
