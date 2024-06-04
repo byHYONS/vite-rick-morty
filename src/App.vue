@@ -36,13 +36,11 @@ export default {
             this.store.meta = response.data.info;
          });
       },
-
+      // funzione per prendere solo una sigola voce da status:
       unifiesStatus() {
-         this.store.cards.forEach(element => {
-            console.log(element);
-            this.store.option = Array.from(new Set(element.status));
-
-         })
+         let risult = new Set();
+         this.store.cards.forEach(element => risult.add(element.status));
+         this.store.option = Array.from(risult);        
       },
    },
    created(){
