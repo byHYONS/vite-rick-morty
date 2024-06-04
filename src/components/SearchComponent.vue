@@ -19,7 +19,8 @@ export default {
         <input type="text" placeholder="Search character"
         v-model="store.search" />
         <select name="status" id="status" 
-        v-model="store.selectedStatus">
+        v-model="store.selectedStatus"
+        @change="$emit('changeOption')">
             <option value="all"> Select status </option>
             <option value="alive"> Alive </option>
             <option value="dead"> Dead </option>
@@ -29,7 +30,7 @@ export default {
             value="status"> {{ option }}</option> -->
 
         </select>
-        
+
         <button class="btn search"
         @click="$emit('search')" 
         >Search</button>

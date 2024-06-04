@@ -111,18 +111,17 @@ export default {
    
             <searchComponent 
             @search="searchCharacter()"
-            @reset="searchReset"/>
+            @reset="searchReset()"
+            @changeOption="searchCharacter()" />
+
             <listComponent />
+
             <footerComponent />
             
          </div>
       </div>
 
    </main>
-
-
-
-
 
 </template>
 
@@ -178,8 +177,6 @@ export default {
    }
       
 }
-
-
 
 </style>
 
