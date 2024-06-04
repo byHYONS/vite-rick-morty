@@ -2,6 +2,9 @@
 import { reactive } from "vue";
 
 export const store = reactive({
+    loading: true,
+    selectedStatus: 'all',
+    search: '',
     option: '',
     cards: [],
     meta: {},

@@ -27,7 +27,8 @@ export default {
     <div class="row gap-50">
 
         <cardComponent class="card-list" 
-        v-for="(card, index) in store.cards" 
+        v-for="(card, index) in store.cards"
+        v-show="card.visible" 
         :key="index" :card="card" />
 
     </div>

@@ -17,14 +17,27 @@ export default {
 
     <div class="search">
         <input type="text" placeholder="Search character"
-        v-model="search" />
-        <select name="status" id="status">
-            <option value="status"> Select status </option>
-            <option v-for="(option, index) in store.option" :key="index"
-            value="status"> {{ option }}</option>
+        v-model="store.search" />
+        <select name="status" id="status" 
+        v-model="store.selectedStatus">
+            <option value="all"> Select status </option>
+            <option value="alive"> Alive </option>
+            <option value="dead"> Dead </option>
+            <option value="unknown"> Unknown </option>
+
+            <!-- <option v-for="(option, index) in store.option" :key="index"
+            value="status"> {{ option }}</option> -->
+
         </select>
-        <button class="btn search">Search</button>
-        <button class="btn reset">Reset</button>
+        
+        <button class="btn search"
+        @click="$emit('search')" 
+        >Search</button>
+
+        <button class="btn reset"
+        @click="$emit('reset')"
+        >Reset</button>
+
     </div>
     
 
