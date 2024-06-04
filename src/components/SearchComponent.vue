@@ -6,8 +6,10 @@ export default {
     data(){
         return {
             store,
+        
         }
-    }
+    },
+
 }
 </script>
 
@@ -17,8 +19,9 @@ export default {
         <input type="text" placeholder="Search character"
         v-model="search" />
         <select name="status" id="status">
-            <option v-for="(option, index) in store.cards" :key="index"
-            value=""> {{ option.status }}</option>
+            <option value="status"> Select status </option>
+            <option v-for="(option, index) in store.option" :key="index"
+            value="status"> {{ option }}</option>
         </select>
         <button class="btn search">Search</button>
         <button class="btn reset">Reset</button>

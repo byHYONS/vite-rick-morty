@@ -29,12 +29,26 @@ export default {
       footerComponent,
 
    },
+   methods: {
+      callApi(){
+         axios.get(this.store.apiInfo.url).then(response => {
+            this.store.cards = response.data.results;
+            this.store.meta = response.data.info;
+         });
+      },
+
+      unifiesStatus() {
+         this.store.cards.forEach(element => {
+            console.log(element);
+            this.store.option = Array.from(new Set(element.status));
+
+         })
+      },
+   },
    created(){
       // chiamata API:
-      axios.get(this.store.apiURL).then(response => {
-         this.store.cards = response.data.results;
-         this.store.meta = response.data.info;
-      });
+      this.callApi();
+      this.unifiesStatus();
    }
 }
 

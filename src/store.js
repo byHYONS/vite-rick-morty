@@ -2,8 +2,14 @@
 import { reactive } from "vue";
 
 export const store = reactive({
+    option: '',
     cards: [],
     meta: {},
-    apiURL: 'https://rickandmortyapi.com/api/character',
+    apiInfo: {
+        url: 'https://rickandmortyapi.com/api/character/',
+        endpoints: {
+            status: '',
+        }
+    }
 
 });
