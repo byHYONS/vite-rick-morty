@@ -38,10 +38,10 @@ export default {
          const selectedStatus = this.store.selectedStatus;
 
          this.store.cards.forEach(element => {
-            const matchesName = element.name.toLowerCase().includes(searchLower);
-            const matchesStatus = selectedStatus === 'all' || element.status.toLowerCase() === selectedStatus;
+            const matchesName = element.name.toLowerCase().includes(searchLower); // restituisce true false
+            const matchesStatus = selectedStatus === 'all' || element.status.toLowerCase() === selectedStatus; // restituisce true false
 
-            element.visible = matchesName && matchesStatus;
+            element.visible = matchesName && matchesStatus; // assegnerà true se tutto ver o false
          });
          this.store.search = '';
 
@@ -75,16 +75,16 @@ export default {
          });
       },
       // funzione per prendere solo una sigola voce da status:
-      unifiesStatus() {
-         let risult = new Set();
-         this.store.cards.forEach(element => risult.add(element.status));
-         this.store.option = Array.from(risult);        
-      },
+      // unifiesStatus() {
+      //    let risult = new Set();
+      //    this.store.cards.forEach(element => risult.add(element.status));
+      //    this.store.option = Array.from(risult);        
+      // },
    },
    created(){
       // chiamata API:
       this.callApi();
-      this.unifiesStatus();
+      // this.unifiesStatus();
    }
 }
 
