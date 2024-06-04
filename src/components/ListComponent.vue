@@ -26,7 +26,9 @@ export default {
 <template>
     <div class="row gap-50">
 
-        <cardComponent class="card-list" v-for="(card, index) in store.cards" :key="index" :card="card" />
+        <cardComponent class="card-list" 
+        v-for="(card, index) in store.cards" 
+        :key="index" :card="card" />
 
     </div>
 
@@ -41,11 +43,9 @@ export default {
 .row {
     padding-bottom: 80px;
     .card-list {
-        @include col-x(50px, 4, 3);
+        @include col-x(50px, 4);
     }
 }
-
-
 
 
 </style>
