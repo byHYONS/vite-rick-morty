@@ -18,6 +18,7 @@ export default {
     <div class="search">
         <input type="text" placeholder="Search character"
         v-model="store.search" />
+
         <select name="status" id="status" 
         v-model="store.selectedStatus"
         @change="$emit('changeOption')">
@@ -41,9 +42,7 @@ export default {
 
     </div>
     
-
 </template>
-
 
 
 <style lang="scss" scoped>
